@@ -9,6 +9,10 @@
     
 }
 
+.todo:last-child{
+    border-bottom: none;
+}
+
 .todo-text{
     padding-left: 1em;
 }
