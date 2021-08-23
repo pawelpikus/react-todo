@@ -16,3 +16,9 @@
 .todo-text{
     padding-left: 1em;
 }
+
+.completed{
+    text-decoration: line-through;
+    font-style: italic;
+    opacity: .6;
+}

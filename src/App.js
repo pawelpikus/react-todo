@@ -28,6 +28,8 @@ class App extends React.Component {
       });
     }
   )
+
+    
 }
 
   handleChange(id){
@@ -49,13 +51,19 @@ class App extends React.Component {
     const { error, isLoaded, todos } = this.state;
 
     if(error){
-        return <div>Error: {error.message}</div>;
+        return (
+        <div className = "container" >
+          <p>That didn't go well... {error}</p>
+        </div>)
     } else if(!isLoaded){
-        return <div>Loading...</div>;
+        return (
+        <div className = "container" >
+          <h1 className="title">Loading...</h1>
+        </div>)
     } else {
       
-      const todoItemsArr = todos && todos.slice(0,5)
-      .map(todo => <TodoItem key={todo.id} item = {todo} handleChange={this.handleChange}/>)
+      const todoItemsArr = todos.slice(0,5)
+      .map(todo => <TodoItem key={todo.id} item={todo} handleChange={this.handleChange}/>)
       
       return ( 
         <div className = "container" >
