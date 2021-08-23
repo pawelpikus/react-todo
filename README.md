@@ -1,6 +1,6 @@
 # Todo app - learning React state
 
-This is just a short exercise to pracice managing state and lifecycle methods. 
+This is just a short exercise to practice managing state and lifecycle methods. 
 
 ## Overview
 
@@ -24,7 +24,7 @@ User is able to:
 
 ### What I learned
 
-With this exercise I practiced using props and state. The most challenging ppart was figuring out how to <code>setState</code> after checking/unchecking items on the list. To accomplish that I used a handler function, which updated the state of <code>completed</code> property of the <code> todo </code> object.
+With this exercise I practiced using props and state. The most challenging part was figuring out how to <code>setState</code> after checking/unchecking items on the list. To accomplish that I used a handler function, which updated the state of <code>completed</code> property of the <code> todo </code> object.
 
 ```javascript
 handleChange(id){
