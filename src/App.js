@@ -3,14 +3,10 @@ import './App.css';
 import TodoItem from './TodoItem'
 
 class App extends React.Component {
-  constructor(){
-    super()
-    this.state = {
-      todos: []
-    }
-    this.handleChange = this.handleChange.bind(this)
+  state = {
+    todos: []
   }
-
+    
   componentDidMount(){
     fetch('https://jsonplaceholder.typicode.com/users/1/todos')
     .then(res => res.json())
@@ -32,7 +28,7 @@ class App extends React.Component {
     
 }
 
-  handleChange(id){
+  handleChange = (id) => {
     this.setState(prevState => {
       const updatedItems = prevState.todos.map(todo => {
         if (todo.id === id) {
